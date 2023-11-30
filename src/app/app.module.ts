@@ -10,6 +10,8 @@ import { InactivePostsComponent } from './components/inactive-posts/inactive-pos
 import { HomeComponent } from './components/home/home.component';
 import { PostCardComponent } from './components/post-card/post-card.component';
 import { DetailsComponent } from './components/details/details.component';
+import { UserComponent } from './components/user/user.component';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
 
 const routes: Route[] = [
   { path: '', component: HomeComponent },
@@ -17,6 +19,17 @@ const routes: Route[] = [
   { path: 'active-posts/:id', component: DetailsComponent },
   { path: 'inactive-posts', component: InactivePostsComponent },
   { path: 'inactive-posts/:id', component: DetailsComponent },
+  { path: 'user', component: UserComponent },
+  {
+    path: 'users',
+    component: UserComponent,
+    children: [
+      {
+        path: ':id',
+        component: UserDetailsComponent,
+      },
+    ],
+  },
 ];
 
 @NgModule({
@@ -28,6 +41,8 @@ const routes: Route[] = [
     HomeComponent,
     PostCardComponent,
     DetailsComponent,
+    UserComponent,
+    UserDetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(routes)],
   providers: [],

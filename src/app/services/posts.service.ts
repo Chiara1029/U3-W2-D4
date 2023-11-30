@@ -62,9 +62,7 @@ export class PostsService {
   }
 
   getPostById(id: number) {
-    let singlePost: Post | undefined = this.postLocali.find(
-      (post) => post.id == id
-    );
+    let singlePost: Post | undefined = this.posts.find((post) => post.id == id);
     return singlePost;
   }
 
