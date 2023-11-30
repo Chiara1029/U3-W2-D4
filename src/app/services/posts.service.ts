@@ -13,6 +13,7 @@ export class PostsService {
         'POST ATTIVO: Dolor velit sint tempor culpa cupidatat ipsum do ad tempor eiusmod.',
       active: true,
       type: 'news',
+      author: 'Chiara',
     },
     {
       id: 2,
@@ -21,6 +22,7 @@ export class PostsService {
         'POST ATTIVO: Dolor velit sint tempor culpa cupidatat ipsum do ad tempor eiusmod.',
       active: true,
       type: 'education',
+      author: 'Andrea',
     },
     {
       id: 3,
@@ -29,6 +31,7 @@ export class PostsService {
         'POST ATTIVO: Dolor velit sint tempor culpa cupidatat ipsum do ad tempor eiusmod.',
       active: true,
       type: 'news',
+      author: 'Francesco',
     },
     {
       id: 4,
@@ -37,6 +40,7 @@ export class PostsService {
         'POST INATTIVO: Dolor velit sint tempor culpa cupidatat ipsum do ad tempor eiusmod.',
       active: false,
       type: 'politic',
+      author: 'Giorgia',
     },
     {
       id: 5,
@@ -45,6 +49,7 @@ export class PostsService {
         'POST INATTIVO: Dolor velit sint tempor culpa cupidatat ipsum do ad tempor eiusmod.',
       active: false,
       type: 'education',
+      author: 'Lorenzo',
     },
   ];
 

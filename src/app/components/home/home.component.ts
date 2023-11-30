@@ -12,10 +12,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {}
 
   postAttivi() {
-    this.router.navigate(['/activePosts']);
+    this.router.navigate(['/active-posts']);
   }
 
   postInattivi() {
-    this.router.navigate(['/inactivePosts']);
+    this.router.navigate(['/inactive-posts']);
   }
 }

@@ -4,4 +4,5 @@ export interface Post {
   title: string;
   active: boolean;
   type: 'news' | 'politic' | 'education';
+  author: string;
 }
