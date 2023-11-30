@@ -19,9 +19,8 @@ const routes: Route[] = [
   { path: 'active-posts/:id', component: DetailsComponent },
   { path: 'inactive-posts', component: InactivePostsComponent },
   { path: 'inactive-posts/:id', component: DetailsComponent },
-  { path: 'user', component: UserComponent },
   {
-    path: 'users',
+    path: 'user',
     component: UserComponent,
     children: [
       {
