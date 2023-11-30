@@ -4,9 +4,9 @@
       <button (click)="onInactivePost(post.id, i)" class="btn btn-primary">
         Disattiva
       </button>
-      <button class="btn btn-primary ms-2" (click)="onDetails(post.id)">
-        Dettagli
-      </button>
+      <a [routerLink]="['/active-posts', post.id]" routerLinkActive="active"
+        ><button class="btn btn-primary ms-2">Dettagli</button>
+      </a>
     </app-post-card>
   </div>
 </div>

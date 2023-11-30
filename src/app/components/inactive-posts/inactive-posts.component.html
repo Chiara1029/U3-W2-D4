@@ -5,7 +5,12 @@
         <button (click)="onActivePost(post.id, i)" class="btn btn-primary">
           Attiva
         </button>
-        <button class="btn btn-primary ms-2">Dettagli</button>
+        <a
+          [routerLink]="['/inactivePosts', post.id]"
+          routerLinkActive="active"
+          class="btn btn-primary ms-2"
+          >Dettagli</a
+        >
       </app-post-card>
     </div>
   </div>

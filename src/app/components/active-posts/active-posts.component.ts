@@ -22,8 +22,4 @@ export class ActivePostsComponent implements OnInit {
     this.postSrv.updatePost({ active: false }, id);
     this.posts.splice(i, 1);
   }
-
-  onDetails(id: number): void {
-    this.router.navigate(['/details', id]);
-  }
 }

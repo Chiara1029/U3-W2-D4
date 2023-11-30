@@ -10,31 +10,13 @@ import { InactivePostsComponent } from './components/inactive-posts/inactive-pos
 import { HomeComponent } from './components/home/home.component';
 import { PostCardComponent } from './components/post-card/post-card.component';
 import { DetailsComponent } from './components/details/details.component';
-import { ActivatedRoute } from '@angular/router';
-import { Subscription } from 'rxjs';
 
 const routes: Route[] = [
   { path: '', component: HomeComponent },
-  {
-    path: 'active-posts',
-    component: ActivePostsComponent,
-    children: [
-      {
-        path: 'details/id',
-        component: DetailsComponent,
-      },
-    ],
-  },
-  {
-    path: 'inactive-posts',
-    component: InactivePostsComponent,
-    children: [
-      {
-        path: 'details/id',
-        component: DetailsComponent,
-      },
-    ],
-  },
+  { path: 'active-posts', component: ActivePostsComponent },
+  { path: 'active-posts/:id', component: DetailsComponent },
+  { path: 'inactive-posts', component: InactivePostsComponent },
+  { path: 'inactive-posts/:id', component: DetailsComponent },
 ];
 
 @NgModule({

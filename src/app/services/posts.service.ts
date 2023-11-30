@@ -61,6 +61,13 @@ export class PostsService {
     return this.posts;
   }
 
+  getPostById(id: number) {
+    let singlePost: Post | undefined = this.postLocali.find(
+      (post) => post.id == id
+    );
+    return singlePost;
+  }
+
   updatePost(data: Partial<Post>, id: number) {
     this.posts = this.posts.map((post) =>
       post.id == id ? { ...post, ...data } : post
